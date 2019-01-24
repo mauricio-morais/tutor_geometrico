@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TutorGeometrico</string>
+    <string name="txt_btn_open_scannner">Abrir Scanner</string>
 </resources>
