@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_horizontal_act_bar">10dp</dimen>
+    <dimen name="height_act_bar">70dp</dimen>
+    <dimen name="elevation_act_bar">4dp</dimen>
+    <dimen name="padding_horizontal_rv">15dp</dimen>
+    <dimen name="padding_vertical_rv">15dp</dimen>
+    <dimen name="padd_15dp">15dp</dimen>
+    <dimen name="padd_5dp">5dp</dimen>
+    <dimen name="margin_top_rv">15dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+    <dimen name="margin_vertical_dividers">3dp</dimen>
+    <dimen name="padding_vertical_tvw">5dp</dimen>
+    <dimen name="padding_horizontal_tvw">10dp</dimen>
+    <dimen name="icon_size">54dp</dimen>
+    <dimen name="figure_size">48dp</dimen>
+    <dimen name="cardview_margin">5dp</dimen>
+    <dimen name="margin_horizontal_dividers">2dp</dimen>
+    <dimen name="padding_vertical_description_item">5dp</dimen>
+    <dimen name="padding_horizontal_description_item">4dp</dimen>
+    <dimen name="cardview_padding">8dp</dimen>
+    <dimen name="padding_text">5dp</dimen>
+    <dimen name="padding_button">10dp</dimen>
+    <dimen name="padding_panel">10dp</dimen>
+    <dimen name="tab_indicator_height">2.5dp</dimen>
+    <dimen name="margin_fab">20dp</dimen>
+    <dimen name="size_fab">64dp</dimen>
+    <dimen name="padding_content">10dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+
+</resources>
