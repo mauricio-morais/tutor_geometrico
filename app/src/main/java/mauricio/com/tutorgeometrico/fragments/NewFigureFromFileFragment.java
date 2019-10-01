@@ -263,7 +263,7 @@ public class NewFigureFromFileFragment extends Fragment {
 
         for (int i = 0; i < figures.size(); i++){
 
-            String code = figures.get(i).getCode();
+            String code = figures.get(i).getCode().toLowerCase();
             String name = figures.get(i).getName();
             String desc = figures.get(i).getDescription();
             String others = figures.get(i).getOthers();

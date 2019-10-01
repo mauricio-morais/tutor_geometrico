@@ -89,7 +89,7 @@ public class NewFigureFragment extends Fragment {
 
     public ContentValues getFigureFromForm(){
 
-        String code = codeInputLayout.getEditText().getText().toString();
+        String code = codeInputLayout.getEditText().getText().toString().toLowerCase();
         String name = nameInputLayout.getEditText().getText().toString();
         String desc = descInputLayout.getEditText().getText().toString();
         String others = othersInputLayout.getEditText().getText().toString();

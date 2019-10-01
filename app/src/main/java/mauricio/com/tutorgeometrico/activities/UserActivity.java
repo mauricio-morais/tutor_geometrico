@@ -142,7 +142,7 @@ public class UserActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
                     List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-                    currentFigure = findFigure(results.get(0));
+                    currentFigure = findFigure(results.get(0).toLowerCase());
 
                     if (currentFigure != null){
 
