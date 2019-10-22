@@ -183,6 +183,8 @@ public class NewFigureFromFileFragment extends Fragment {
         HSSFSheet sheet = workbook.getSheetAt(0);
         Iterator<Row> rowIter = sheet.iterator();
 
+       rowIter.next();
+
         while (rowIter.hasNext()){
 
             Row row = rowIter.next();
@@ -190,6 +192,8 @@ public class NewFigureFromFileFragment extends Fragment {
             Iterator<Cell> cellsIter = row.cellIterator();
 
             Figure figure = new Figure();
+
+            //Log.e("TUTOR", String.valueOf(row.getRowNum()));
 
             while (cellsIter.hasNext()){
 
@@ -263,19 +267,33 @@ public class NewFigureFromFileFragment extends Fragment {
 
         for (int i = 0; i < figures.size(); i++){
 
-            String code = figures.get(i).getCode().toLowerCase();
-            String name = figures.get(i).getName();
-            String desc = figures.get(i).getDescription();
-            String others = figures.get(i).getOthers();
+            try {
 
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(DatabaseDescription.FigureDesc.COLUMN_CODE, code);
-            contentValues.put(DatabaseDescription.FigureDesc.COLUMN_NAME, name);
-            contentValues.put(DatabaseDescription.FigureDesc.COLUMN_DESCRIPTION, desc);
-            contentValues.put(DatabaseDescription.FigureDesc.COLUMN_OTHERS, others);
-            contentValues.put(DatabaseDescription.FigureDesc.COLUMN_DATE_CREATED, Calendar.getInstance().getTime().toString());
+                String code = figures.get(i).getCode().toLowerCase();
+                String name = figures.get(i).getName();
+                String desc = figures.get(i).getDescription();
+                String others = figures.get(i).getOthers();
 
-            allContentValues[i] = contentValues;
+                ContentValues contentValues = new ContentValues();
+                contentValues.put(DatabaseDescription.FigureDesc.COLUMN_CODE, code);
+                contentValues.put(DatabaseDescription.FigureDesc.COLUMN_NAME, name);
+                contentValues.put(DatabaseDescription.FigureDesc.COLUMN_DESCRIPTION, desc);
+                contentValues.put(DatabaseDescription.FigureDesc.COLUMN_OTHERS, others);
+                contentValues.put(DatabaseDescription.FigureDesc.COLUMN_DATE_CREATED, Calendar.getInstance().getTime().toString());
+
+                allContentValues[i] = contentValues;
+
+            } catch(Exception e){
+
+                // Solução momentânea (Forma errada)
+
+                allContentValues[i] = new ContentValues();
+
+                Log.e(getString(R.string.TAG_TUTOR),  e.toString());
+
+             }
+
+
         }
 
         return allContentValues;
